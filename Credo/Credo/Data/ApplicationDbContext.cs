@@ -14,6 +14,7 @@ namespace Credo.Data
         {
         }
 
-        DbSet<AppUser> AppUsers { get; set; }
+        public DbSet<Loan> Loans { get; set; }
+        public DbSet<AppUser> AppUsers { get; set; }
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zcbtw9P4MzkuwVzcYUGYl8eTzBK/PSHeb5VgZPm96ASrNjE1B/YU22tBkSjHqGPT2wwRpb1MY3L0O+kEHaOE0Q==",
+  "dgSpecHash": "i7b9yn5/qzbqezE/y1zKOLYkwWzuRRotc9QbC1i2qDJpMOHCoM+zZI51z5By6UoW+dgPYEVW//YX8iSumOZzng==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sabak\\source\\repos\\Credo\\Credo\\Credo.csproj",
+  "projectFilePath": "C:\\Users\\sabak\\OneDrive\\Рабочий стол\\Credo\\Credo\\Credo\\Credo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sabak\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.5\\microsoft.aspnetcore.cryptography.internal.3.1.5.nupkg.sha512",
     "C:\\Users\\sabak\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.5\\microsoft.aspnetcore.cryptography.keyderivation.3.1.5.nupkg.sha512",

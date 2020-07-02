@@ -12,6 +12,9 @@ using Credo.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Credo.Services;
+using Credo.Models;
+using Credo.Services.Query;
 
 namespace Credo
 {
@@ -34,6 +37,9 @@ namespace Credo
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
+
+            services.AddTransient<ILoanCrud, LoanCrud>();
+            services.AddTransient<ILoanQuery, LoanQuery>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -52,6 +58,7 @@ namespace Credo
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+
 
             app.UseRouting();
 

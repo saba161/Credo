@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sabak\\source\\repos\\Credo\\Credo\\Credo.csproj": {}
+    "C:\\Users\\sabak\\OneDrive\\Рабочий стол\\Credo\\Credo\\Credo\\Credo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sabak\\source\\repos\\Credo\\Credo\\Credo.csproj": {
+    "C:\\Users\\sabak\\OneDrive\\Рабочий стол\\Credo\\Credo\\Credo\\Credo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sabak\\source\\repos\\Credo\\Credo\\Credo.csproj",
+        "projectUniqueName": "C:\\Users\\sabak\\OneDrive\\Рабочий стол\\Credo\\Credo\\Credo\\Credo.csproj",
         "projectName": "Credo",
-        "projectPath": "C:\\Users\\sabak\\source\\repos\\Credo\\Credo\\Credo.csproj",
+        "projectPath": "C:\\Users\\sabak\\OneDrive\\Рабочий стол\\Credo\\Credo\\Credo\\Credo.csproj",
         "packagesPath": "C:\\Users\\sabak\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sabak\\source\\repos\\Credo\\Credo\\obj\\",
+        "outputPath": "C:\\Users\\sabak\\OneDrive\\Рабочий стол\\Credo\\Credo\\Credo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

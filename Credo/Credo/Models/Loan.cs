@@ -15,5 +15,7 @@ namespace Credo.Models
         public LoanType LoanType { get; set; }
 
         public LoanStatus LoanStatus { get; set; }
+
+        public string AppUser { get; set; }
     }
 }

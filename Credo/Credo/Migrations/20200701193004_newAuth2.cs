@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Credo.Migrations
 {
-    public partial class AutNew : Migration
+    public partial class newAuth2 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -154,7 +154,7 @@ namespace Credo.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Loan",
+                name: "Loans",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -168,9 +168,9 @@ namespace Credo.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Loan", x => x.Id);
+                    table.PrimaryKey("PK_Loans", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Loan_AspNetUsers_AppUserId",
+                        name: "FK_Loans_AspNetUsers_AppUserId",
                         column: x => x.AppUserId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
@@ -217,8 +217,8 @@ namespace Credo.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Loan_AppUserId",
-                table: "Loan",
+                name: "IX_Loans_AppUserId",
+                table: "Loans",
                 column: "AppUserId");
         }
 
@@ -240,7 +240,7 @@ namespace Credo.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "Loan");
+                name: "Loans");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");

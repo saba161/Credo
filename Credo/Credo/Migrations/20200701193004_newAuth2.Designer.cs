@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Credo.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200701185144_AutNew")]
-    partial class AutNew
+    [Migration("20200701193004_newAuth2")]
+    partial class newAuth2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -50,7 +50,7 @@ namespace Credo.Migrations
 
                     b.HasIndex("AppUserId");
 
-                    b.ToTable("Loan");
+                    b.ToTable("Loans");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -268,7 +268,7 @@ namespace Credo.Migrations
 
             modelBuilder.Entity("Credo.Models.Loan", b =>
                 {
-                    b.HasOne("Credo.Models.AppUser", null)
+                    b.HasOne("Credo.Models.AppUser", "AppUser")
                         .WithMany("Loans")
                         .HasForeignKey("AppUserId");
                 });
