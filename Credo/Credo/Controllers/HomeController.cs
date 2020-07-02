@@ -1,8 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Credo.Services;
-using Microsoft.AspNetCore.Identity;
-using System.Security.Claims;
 
 namespace Credo.Controllers
 {

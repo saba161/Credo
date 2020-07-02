@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Credo.Models.Loan>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>My Loans</h2>
+
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th>Period</th>
+            <th>Currency</th>
+            <th>Loan Status</th>
+            <th>Loan Type</th>
+            <th>Remove</th>
+            <th>Edit</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Amount</td>
+                <td>@item.Period</td>
+                <td>@item.Currency</td>
+                <td>@item.LoanStatus</td>
+                <td>@item.LoanType</td>
+                <td hidden>@item.Id</td>
+                <td>
+                    <a asp-controller="Loan" asp-action="Remove" asp-route-id="@item.Id">Remove</a>
+                </td>
+                <td>
+                    <a asp-controller="Loan" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                </td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

@@ -1,10 +1,7 @@
-﻿using Credo.Data;
-using Credo.Services;
-using Credo.Services.Query;
+﻿using Credo.Services.Query;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using System.Linq;
 
 namespace Credo.Controllers.Query
 {
@@ -19,16 +16,14 @@ namespace Credo.Controllers.Query
             this.loanQuery = loanQuery;
         }
 
-
-        public IActionResult Index(string email)
+        [Authorize]
+        public IActionResult Index()
         {
-            var users = userManager.Users
-                .Where(x => x.Email == email)
-                .FirstOrDefault();
+            var currUser = userManager.GetUserId(HttpContext.User);
 
-            var loans = loanQuery.UserWithLoan(users.Id);
+            var loans = loanQuery.UserWithLoan(currUser);
 
-            return View();
+            return View(loans);
         }
     }
 }
