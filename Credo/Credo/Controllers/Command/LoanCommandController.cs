@@ -6,12 +6,12 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Credo.Controllers.Command
 {
-    public class LoanController : Controller
+    public class LoanCommandController : Controller
     {
         private readonly UserManager<IdentityUser> userManager;
         private ILoanCrud loanCrud;
 
-        public LoanController(ILoanCrud loanCrud, UserManager<IdentityUser> userManager)
+        public LoanCommandController(ILoanCrud loanCrud, UserManager<IdentityUser> userManager)
         {
             this.userManager = userManager;
             this.loanCrud = loanCrud;
