@@ -175,3 +175,4 @@ C:\Users\sabak\OneDrive\Рабочий стол\Credo\Credo\Credo\obj\Debug\netc
 C:\Users\sabak\OneDrive\Рабочий стол\Credo\Credo\Credo\obj\Debug\netcoreapp3.1\Credo.genruntimeconfig.cache
 C:\Users\sabak\OneDrive\Рабочий стол\Credo\Credo\Credo\obj\Debug\netcoreapp3.1\Razor\Views\Loan\Index.cshtml.g.cs
 C:\Users\sabak\OneDrive\Рабочий стол\Credo\Credo\Credo\obj\Debug\netcoreapp3.1\Razor\Views\LoanQuery\Index.cshtml.g.cs
+C:\Users\sabak\OneDrive\Рабочий стол\Credo\Credo\Credo\obj\Debug\netcoreapp3.1\Razor\Views\LoanQuery\Edit.cshtml.g.cs

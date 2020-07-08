@@ -34,10 +34,10 @@ namespace Credo.Controllers.Command
         }
 
         [Authorize]
-        [HttpGet]
-        public string Edit(Loan loan, int loanId)
+        [HttpPost]
+        public string Edit(Loan loan, int Id)
         {
-            var ressultStatus = loanCrud.Edit(loan, loanId);
+            var ressultStatus = loanCrud.Edit(loan, Id);
 
             return ressultStatus;
         }
@@ -50,6 +50,5 @@ namespace Credo.Controllers.Command
 
             return ressultStatus;
         }
-
     }
 }

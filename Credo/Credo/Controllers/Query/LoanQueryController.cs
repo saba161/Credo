@@ -25,5 +25,11 @@ namespace Credo.Controllers.Query
 
             return View(loans);
         }
+
+        [Authorize]
+        public IActionResult Edit(int id)
+        {
+            return View();
+        }
     }
 }
