@@ -23,7 +23,7 @@ namespace Credo.Services
                     Amount = loan.Amount,
                     AppUser = loan.AppUser,
                     Currency = loan.Currency,
-                    LoanStatus = LoanStatus.Rejected,
+                    LoanStatus = LoanStatus.Forwarded,
                     LoanType = loan.LoanType,
                     Period = loan.Period
                 });
@@ -37,7 +37,7 @@ namespace Credo.Services
         {
             var currentLoan = _context.Loans.Where(x => x.Id == loanId).FirstOrDefault();
 
-            if (loan.LoanStatus != LoanStatus.Approved || loan.LoanStatus != LoanStatus.Rejected)
+            if (currentLoan.LoanStatus != LoanStatus.Approved || currentLoan.LoanStatus != LoanStatus.Rejected)
             {
                 currentLoan.Amount = loan.Amount;
                 currentLoan.Currency = loan.Currency;

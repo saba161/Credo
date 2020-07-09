@@ -148,9 +148,6 @@ C:\Users\sabak\OneDrive\Рабочий стол\Credo\Credo\Credo\bin\Debug\netc
 C:\Users\sabak\OneDrive\Рабочий стол\Credo\Credo\Credo\obj\Debug\netcoreapp3.1\Credo.csprojAssemblyReference.cache
 C:\Users\sabak\OneDrive\Рабочий стол\Credo\Credo\Credo\obj\Debug\netcoreapp3.1\Credo.AssemblyInfoInputs.cache
 C:\Users\sabak\OneDrive\Рабочий стол\Credo\Credo\Credo\obj\Debug\netcoreapp3.1\Credo.AssemblyInfo.cs
-C:\Users\sabak\OneDrive\Рабочий стол\Credo\Credo\Credo\obj\Debug\netcoreapp3.1\Credo.csproj.CoreCompileInputs.cache
-C:\Users\sabak\OneDrive\Рабочий стол\Credo\Credo\Credo\obj\Debug\netcoreapp3.1\Credo.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\sabak\OneDrive\Рабочий стол\Credo\Credo\Credo\obj\Debug\netcoreapp3.1\Credo.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\sabak\OneDrive\Рабочий стол\Credo\Credo\Credo\obj\Debug\netcoreapp3.1\Credo.RazorAssemblyInfo.cache
 C:\Users\sabak\OneDrive\Рабочий стол\Credo\Credo\Credo\obj\Debug\netcoreapp3.1\Credo.RazorAssemblyInfo.cs
 C:\Users\sabak\OneDrive\Рабочий стол\Credo\Credo\Credo\obj\Debug\netcoreapp3.1\Credo.TagHelpers.input.cache
@@ -176,3 +173,9 @@ C:\Users\sabak\OneDrive\Рабочий стол\Credo\Credo\Credo\obj\Debug\netc
 C:\Users\sabak\OneDrive\Рабочий стол\Credo\Credo\Credo\obj\Debug\netcoreapp3.1\Razor\Views\LoanQuery\Index.cshtml.g.cs
 C:\Users\sabak\OneDrive\Рабочий стол\Credo\Credo\Credo\obj\Debug\netcoreapp3.1\Razor\Views\LoanQuery\Edit.cshtml.g.cs
 C:\Users\sabak\OneDrive\Рабочий стол\Credo\Credo\Credo\obj\Debug\netcoreapp3.1\Razor\Views\LoanCommand\Index.cshtml.g.cs
+C:\Users\sabak\OneDrive\Рабочий стол\Credo\Credo\Credo\bin\Debug\netcoreapp3.1\Serilog.dll
+C:\Users\sabak\OneDrive\Рабочий стол\Credo\Credo\Credo\bin\Debug\netcoreapp3.1\Serilog.Sinks.File.dll
+C:\Users\sabak\OneDrive\Рабочий стол\Credo\Credo\Credo\bin\Debug\netcoreapp3.1\Serilog.Sinks.Console.dll
+C:\Users\sabak\OneDrive\Рабочий стол\Credo\Credo\Credo\obj\Debug\netcoreapp3.1\Credo.csproj.CoreCompileInputs.cache
+C:\Users\sabak\OneDrive\Рабочий стол\Credo\Credo\Credo\obj\Debug\netcoreapp3.1\Credo.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\sabak\OneDrive\Рабочий стол\Credo\Credo\Credo\obj\Debug\netcoreapp3.1\Credo.MvcApplicationPartsAssemblyInfo.cache
