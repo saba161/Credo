@@ -3,6 +3,8 @@ using Credo.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Serilog;
+using System;
 
 namespace Credo.Controllers.Command
 {
@@ -26,29 +28,67 @@ namespace Credo.Controllers.Command
         [HttpPost]
         public string Create(Loan loan)
         {
-            var currUser = userManager.GetUserId(HttpContext.User);
-            loan.AppUser = currUser;
-            var ressultStatus = loanCrud.AddLoan(loan);
+            try
+            {
+                var currUser = userManager.GetUserId(HttpContext.User);
+                loan.AppUser = currUser;
+                var ressultStatus = loanCrud.AddLoan(loan);
 
-            return ressultStatus;
+                Logger(loan, ressultStatus);
+
+                return ressultStatus;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                throw new ArgumentException();
+            }
         }
 
         [Authorize]
         [HttpPost]
         public string Edit(Loan loan, int Id)
         {
-            var ressultStatus = loanCrud.Edit(loan, Id);
+            try
+            {
+                var ressultStatus = loanCrud.Edit(loan, Id);
 
-            return ressultStatus;
+                Logger(loan, ressultStatus);
+
+                return ressultStatus;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                throw new ArgumentException();
+            }
         }
 
         [Authorize]
         [HttpGet]
         public string Remove(int loanId)
         {
-            var ressultStatus = loanCrud.Remove(loanId);
+            try
+            {
+                var ressultStatus = loanCrud.Remove(loanId);
 
-            return ressultStatus;
+                return ressultStatus;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                throw new ArgumentException();
+            }
+        }
+
+        private void Logger(Loan loan, string text)
+        {
+            Log.Information($"Amount: {loan.Amount} "
+                + $"Currency: {loan.Currency} "
+                + $"LoanStatus: {loan.LoanStatus} "
+                + $"LoanType: {loan.LoanType} "
+                + $"Period: {loan.Period} "
+                + $"result: {text} ");
         }
     }
 }

@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Serilog;
+using System;
 
 namespace Credo.Controllers.Query
 {
@@ -19,11 +21,19 @@ namespace Credo.Controllers.Query
         [Authorize]
         public IActionResult Index()
         {
-            var currUser = userManager.GetUserId(HttpContext.User);
+            try
+            {
+                var currUser = userManager.GetUserId(HttpContext.User);
 
-            var loans = loanQuery.UserWithLoan(currUser);
+                var loans = loanQuery.UserWithLoan(currUser);
 
-            return View(loans);
+                return View(loans);
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                throw new ArgumentException();
+            }
         }
 
         [Authorize]
