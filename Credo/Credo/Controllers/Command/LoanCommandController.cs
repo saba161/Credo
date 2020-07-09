@@ -71,6 +71,7 @@ namespace Credo.Controllers.Command
             try
             {
                 var ressultStatus = loanCrud.Remove(loanId);
+                Log.Information(ressultStatus);
 
                 return ressultStatus;
             }
