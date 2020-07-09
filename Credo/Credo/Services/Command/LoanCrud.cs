@@ -37,19 +37,24 @@ namespace Credo.Services
         {
             var currentLoan = _context.Loans.Where(x => x.Id == loanId).FirstOrDefault();
 
-            if (currentLoan.LoanStatus != LoanStatus.Approved || currentLoan.LoanStatus != LoanStatus.Rejected)
+            if (currentLoan.LoanStatus == LoanStatus.Approved)
             {
-                currentLoan.Amount = loan.Amount;
-                currentLoan.Currency = loan.Currency;
-                currentLoan.LoanType = loan.LoanType;
-                currentLoan.Period = loan.Period;
-
-                _context.SaveChanges();
-
-                return "Updated";
+                return "can't edit this loan";
             }
 
-            return "can't edit this loan";
+            if (currentLoan.LoanStatus == LoanStatus.Rejected)
+            {
+                return "can't edit this loan";
+            }
+
+            currentLoan.Amount = loan.Amount;
+            currentLoan.Currency = loan.Currency;
+            currentLoan.LoanType = loan.LoanType;
+            currentLoan.Period = loan.Period;
+
+            _context.SaveChanges();
+
+            return "Updated";
         }
 
         public string Remove(int id)
